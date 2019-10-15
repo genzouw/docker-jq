@@ -8,6 +8,10 @@ This is Dockerfile repository that wrap [jq](https://stedolan.github.io/jq.) com
 
 *Please refer to the official website of [jq](https://stedolan.github.io/jq.) for how to use [jq](https://stedolan.github.io/jq.) command.*
 
+Docker images can be referenced from the following page.
+
+* [Docker Hub](https://hub.docker.com/r/genzouw/jq)
+
 ## Requirements
 
 * [Docker](https://www.docker.com)
@@ -38,6 +42,12 @@ $ echo '{ "x":1, "y":"c" }' | docker run -i genzouw/jq -c .y
 
 $ echo '{ "x":1, "y":"c" }' | docker run -i genzouw/jq -rc .y
 c
+```
+
+It is more convenient to put the following aliases in the `~/.bashrc` or `~/.zshrc` file.
+
+```bash
+$ alias jq='docker run -i genzouw/jq'
 ```
 
 ## Relase Note
