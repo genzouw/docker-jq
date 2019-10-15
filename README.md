@@ -2,11 +2,11 @@
 
 ## Description
 
-This is Dockerfile repository that wrap [jq](https://stedolan.github.io/jq.) command.
+This is Dockerfile repository that wrap [jq](https://stedolan.github.io/jq) command.
 
 **This docker image is very small to use comand line.**
 
-*Please refer to the official website of [jq](https://stedolan.github.io/jq.) for how to use [jq](https://stedolan.github.io/jq.) command.*
+*Please refer to the official website of [jq](https://stedolan.github.io/jq) for how to use [jq](https://stedolan.github.io/jq) command.*
 
 Docker images can be referenced from the following page.
 
@@ -24,7 +24,7 @@ $ docker pull genzouw/jq
 
 ## Usage
 
-**Please refer to the official website of [jq](https://stedolan.github.io/jq.) for how to use [jq](https://stedolan.github.io/jq.) command.**
+**Please refer to the official website of [jq](https://stedolan.github.io/jq) for how to use [jq](https://stedolan.github.io/jq) command.**
 
 
 ```bash
