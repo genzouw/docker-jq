@@ -1,5 +1,10 @@
 # docker-jq
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/genzouw/jq.svg?style=for-the-badge)](https://hub.docker.com/r/genzouw/jq/)
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/genzouw/jq.svg?style=for-the-badge)](https://hub.docker.com/r/genzouw/jq/)
+
+[![dockeri.co](https://dockeri.co/image//jq)](https://hub.docker.com/r//jq)
+
 ## Description
 
 This is Dockerfile repository that wrap [jq](https://stedolan.github.io/jq) command.
