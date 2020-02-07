@@ -1,9 +1,10 @@
 # docker-jq
 
+[![Docker Cloud build status](https://img.shields.io/docker/cloud/build/genzouw/jq?style=for-the-badge)](https://hub.docker.com/r/genzouw/jq/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/genzouw/jq.svg?style=for-the-badge)](https://hub.docker.com/r/genzouw/jq/)
 [![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/genzouw/jq.svg?style=for-the-badge)](https://hub.docker.com/r/genzouw/jq/)
 
-[![dockeri.co](https://dockeri.co/image//jq)](https://hub.docker.com/r//jq)
+[![dockeri.co](https://dockeri.co/image/genzouw/jq)](https://hub.docker.com/r/genzouw/jq)
 
 ## Description
 
@@ -11,7 +12,8 @@ This is Dockerfile repository that wrap [jq](https://stedolan.github.io/jq) comm
 
 **This docker image is very small to use comand line.**
 
-*Please refer to the official website of [jq](https://stedolan.github.io/jq) for how to use [jq](https://stedolan.github.io/jq) command.*
+* *Please refer to the official website of [jq](https://stedolan.github.io/jq) for how to use [jq](https://stedolan.github.io/jq) command.*
+* *Please contact me anytime if you have a problem or request! My information is posted at the bottom of this document.*
 
 Docker images can be referenced from the following page.
 
@@ -54,13 +56,6 @@ It is more convenient to put the following aliases in the `~/.bashrc` or `~/.zsh
 ```bash
 $ alias jq='docker run -i genzouw/jq'
 ```
-
-## Relase Note
-
-|date      |version|note          |
-|---       |---    |---           |
-|2019-10-16|0.1    |first release.|
-
 
 ## License
 
