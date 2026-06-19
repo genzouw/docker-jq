@@ -58,6 +58,8 @@ jobs:
         # exit-code 1 へ戻して赤検知に切り替える。
         run: |
           trivy fs \
+            --format sarif \
+            --output trivy-misconfig-secret.sarif \
             --severity CRITICAL,HIGH \
             --scanners misconfig,secret \
             --exit-code 0 \
@@ -69,3 +71,10 @@ jobs:
         with:
           sarif_file: "trivy-fs.sarif"
           category: trivy-fs
+
+      - name: Upload Trivy misconfig/secret SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@78ed0c7291d93e40c51b085850dc669a4c3ab73b # v3
+        with:
+          sarif_file: "trivy-misconfig-secret.sarif"
+          category: trivy-misconfig-secret
