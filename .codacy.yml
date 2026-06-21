@@ -1,0 +1,20 @@
+---
+# Codacy 設定ファイル
+# https://docs.codacy.com/repositories-configure/codacy-configuration-file/
+#
+# 以下のファイルは GitHub Actions の各 lint で品質を別途担保している。
+# Codacy のデフォルトルール（古い ES5 想定の JS 解析 / リポジトリの
+# markdownlint 設定を読まない bare URL 検出）による誤検知を抑制するため、
+# Codacy の解析対象から除外する。
+exclude_paths:
+  # commitlint.config.js:
+  #   - ESM (`export default`) 構文を「ES2015 modules are forbidden」と誤検知
+  #   - 必須キー `extends`（ES5 予約語）を「reserved words as property names」と誤検知
+  #   いずれも commitlint の仕様上コードでは除去できない。
+  - "commitlint.config.js"
+  # README.md:
+  #   bare URL は GFM で自動リンク化されるため許可する方針（markdownlint の
+  #   MD034 を .markdownlint-cli2.jsonc で無効化済み）。Codacy はこの設定を
+  #   読まないため重複指摘になる。markdown 品質は GitHub Actions の
+  #   markdownlint-cli2 ジョブで担保済み。
+  - "README.md"
