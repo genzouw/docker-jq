@@ -110,4 +110,4 @@ Issue では「なぜ既存の無料サービスでは目的を達成できな�
 
 ## 7. 本ポリシーの適用範囲
 
-本ポリシーは [@genzouw](https://github.com/genzouw) が公開しているすべての公開リポジトリに共通で適用されます。
+本ポリシーはまず本リポジトリ ([genzouw/docker-jq](https://github.com/genzouw/docker-jq)) に適用されます。[@genzouw](https://github.com/genzouw) が公開する他の公開リポジトリへ展開する場合は、当該リポジトリのルートに同様の `AGENTS.md` を配置してください。
