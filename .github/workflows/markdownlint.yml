@@ -26,4 +26,4 @@ permissions:
 
 jobs:
   markdownlint:
-    uses: genzouw/ci-workflows/.github/workflows/markdownlint.yml@28d2b9b6f563eb1126e786f28e308390b2558a47 # v1.0.1
+    uses: genzouw/ci-workflows/.github/workflows/markdownlint.yml@1c657597cebfb13594ed202f43c14ffa4959fd8b # v1.4.4
