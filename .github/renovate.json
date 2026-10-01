@@ -1,5 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": [
+    "minimumReleaseAge は 1 日にする。公開から 1 日程度で更新 PR を作るため。問題のあるリリースを取り込むまでの猶予は 1 日に縮むが、automerge は無く更新 PR は人が確認してからマージする。",
+    "minimumReleaseAgeBehaviour は既定の timestamp-required のままにする。docker-jq の依存（Docker Hub の alpine イメージ、GitHub Actions の SHA pin）はすべて releaseTimestamp を返すため timestamp-optional にする必要がなく、指定すると将来 timestamp を返さない依存（GHCR など）を足したときに待機なしで PR が作られるため。",
+    "schedule は毎日 9〜12 時台の 4 時間にする。Mend Renovate App の実行はおおむね 1 時間ごとで時刻を選べず、1 時間だけの窓では実行が入らない日に翌日へ持ち越されるため（https://docs.renovatebot.com/key-concepts/scheduling/）。"
+  ],
   "extends": [
     "config:recommended",
     "helpers:pinGitHubActionDigests"
@@ -8,10 +13,9 @@
   "semanticCommitScope": "deps",
   "timezone": "Asia/Tokyo",
   "schedule": [
-    "* 9 * * *"
+    "* 9-12 * * *"
   ],
   "minimumReleaseAge": "1 day",
-  "minimumReleaseAgeBehaviour": "timestamp-optional",
   "prConcurrentLimit": 5,
   "labels": [
     "dependencies"
